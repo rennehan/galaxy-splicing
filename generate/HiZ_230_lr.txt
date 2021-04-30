@@ -1,0 +1,78 @@
+OutputDir      		./			% Output directory
+OutputFile     		HiZ_230_lr.dat            	% Filename of generated initial conditions
+
+
+CC             		3.5				% halo concentration
+V200	       		230.0			% circular velocity v_200 (in km/sec)
+LAMBDA        		0.033 			% spin parameter          
+AnisotropyRadius    0.0     		% anisotropy radius, in terms of
+                                		% hernquist profile radius RH
+
+
+MD             		0.064    		% disk mass fraction      
+MB            		0.045   		% bulge mass fraction     
+MBH            		0.00001  		% black hole mass fraction. If zero, no black
+                          			% hole is generated, otherwise one at the centre
+                          			% is added.
+
+N_HALO         		1750000     		% desired number of particles in dark halo
+N_DISK         		375000 	    	 	% desired number of collisionless particles in disk
+N_GAS          		875000      		% number of gas particles in disk
+N_BULGE        		875000          	% number of bulge particles
+ 
+UseQrng                 0			% 0=pseudorandom, 1=quasirandom numbers
+WriteDensity            0			% write density instead of mass
+
+JD             		0.064	  		% disk spin fraction, typically chosen equal to MD
+H                   1.6           % disk scale length (typically set by JD)
+DiskHeight     		0.0813         	% thickness of stellar disk in units of radial scale length 
+RadialDispersionFactor  1.0			% radial dispersion in units of the vertical
+						% dispersion
+
+DiskPopMode             exponential		% either "constant","instantaneous", or "exponential"
+DiskPopAge              13.9            	% in Gyr
+DiskPopTau              -106.0          	% in Gyr (generally negative)
+
+GasFraction    			0.70      		% relative content of gas in the disk,
+						% the rest is stars
+MaxGasDiskHeight        10.0			% prevent flaring of outer gas disk
+GasDistribution         1       		% 0 = exponential disk (same for gas/stars)
+						% 1 = exponential disk (with Rd_gas ->
+						% Rd*Alpha)
+						% 2 = power law (PowerLawGamm < 2)
+GasExpAlpha             2.0     		% gas disk scale length multiplicative factor
+PowerLawGamma           1.0     		% power law index, sigma = r^-gamma
+                                		% gamma < 2, gamma = 1 is mestel
+PowerLawCutoff          1.0			% max radius of gas for power law distribution,
+                                		% in units of H
+Zmet0                   0.032   		% gas metallicity central value (solar)
+ZmetGrad               -0.03			% gas metallicity gradient (dex/kpc)
+
+GravSoftening           0.06			% soften force on small scales
+ErrTolTheta             0.15			% tree opening criteria
+
+BulgeSize      		0.75			% bulge scale length in units of disk scale length 
+BulgePopMode		instantaneous		% either "constant", "instantaneous", or "exponential"
+BulgePopAge     	13.9                    
+BulgePopTau    		1.0                     
+
+
+MaxSfrTimescale     	4.5         		% Gas consumption timescale
+FactorSN            	0.1         		% beta, mass fraction of massive stars
+FactorEVP           	3000        		% A_0, evaporation parameter
+TempSupernova       	3e+08       		% T_SN, effective "supernova temperature"
+TempClouds          	1000        		% temperature of cold clouds
+
+FactorForSofterEQS  	1.0        		% Can be used to make the equation of state
+                                		% softer. For 1.0, the multiphase model is
+						% used, while for 0.0 isothermal at 10^4 K is
+						% assumed. Intermediate values interpolate
+                                		% linearly between the two pressures.
+
+						% Brants additions
+REDSHIFT            	2.0         		% redshift to scale galaxy properties to
+Omega_m0            	0.3         		% Omega_m
+Omega_L0            	0.7         		% Omega_L
+
+
+
