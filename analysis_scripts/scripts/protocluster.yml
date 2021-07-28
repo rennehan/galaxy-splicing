@@ -1,0 +1,42 @@
+phase_indices_label: 'phase_indices_'
+phase_crit_temp: 1.0e5
+crit_density: 0.1
+xH: 0.76
+
+phases:
+  SF:
+    rho: ['star_crit_density', 'inf']
+    temp: ['-inf', 'inf']
+  Cool:
+    rho: ['-inf', 'star_crit_density']
+    temp: ['1e4', '1e5']
+  Mid:
+    rho: ['-inf', 'star_crit_density']
+    temp: ['1e5', '1e6']
+  Hot:
+    rho: ['-inf', 'star_crit_density']
+    temp: ['1e6', 'inf']
+
+solar_mass_frac:
+  Z: 0.02
+solar_abundances:
+  He: 10.93
+  C: 8.43
+  N: 7.83
+  O: 8.69
+  Ne: 7.93
+  Mg: 7.53
+  Si: 7.51
+  S: 7.12
+  Ca: 6.34
+  Fe: 7.50
+
+save_path:
+  reduction: 'reduction_'
+  proj: 'projections'
+  flow: 'flow'
+  phase: 'phases'
+  phase_indices: 'indices'
+  distributions: 'distributions'
+  fractions: 'fractions' 
+
