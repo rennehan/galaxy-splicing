@@ -1,0 +1,43 @@
+snapshot_file           SNAPSHOTFILE
+nbodycod                GADGET
+output_file             OUTPUTFILE
+simparfile              SIMPARFILE
+stellarmodelfile        /home/rennehan/data/sunrise/Patrik-imfKroupa-Zmulti-ml.fits
+
+diskpopmode1            exponential
+diskpopage1             13.9e9
+diskpoptau1             -106e9 
+bulgepopmode1           instantaneous
+bulgepopage1            13.9e9
+central_metallicity1    0.032
+metallicity_gradient1   -0.03
+use_teff                true
+
+min_wavelength          89.0e-9
+max_wavelength          1e-3
+
+grid_min                -150. -150 -150
+grid_max                150. 150 150
+use_grid_emission       false
+gas_tolerance           1e100
+L_bol_tolerance         1e100
+metal_tolerance         0.1
+n_rays_estimated        10000000
+opacity                 3e-5
+gas_metallicity         0
+tau_tolerance           1
+size_factor             2
+max_level               8
+work_chunk_levels       5
+mcrx_data_dir           /home/rennehan/src/sunrise_complete/sunrise/src/
+
+seed                    42
+
+use_mappings_seds       true
+mappings_sed_file       /home/rennehan/data/sunrise/Smodel-lores128.fits
+mappings_pdr_fraction   0.3
+mappings_mcl            1e5
+
+center_galaxies         true
+use_counters            true
+n_threads               32

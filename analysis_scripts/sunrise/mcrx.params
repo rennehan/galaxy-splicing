@@ -1,0 +1,53 @@
+input_file                      MCRXINPUT
+output_file                     MCRXOUTPUT
+compress_images                 false
+write_images_parallel           false
+mcrx_data_dir                   /home/rennehan/src/sunrise_complete/sunrise/src/
+cameradistance                  600 
+npixels                         600 
+camerafov                       150
+ntheta                          1
+nphi                            1
+exclude_south_pole              true
+camera_projection               rectilinear
+camera_position                 10.0 10.0 10.0
+
+dust_grain_file                 /home/rennehan/data/sunrise/kext_albedo_WD_MW_3.1_60 
+dust_to_gas_ratio               0.0 
+dust_to_metal_ratio             0.4
+use_multiphase_model            true
+multiphase_t0_star              1.1e9
+multiphase_rho_th               1.71e7
+
+grain_model                     wd01_Brent_PAH
+wd01_parameter_set              DL07_MW3.1_60
+use_dl07_opacities              true
+grain_data_directory            /home/rennehan/data/sunrise/crosssections/
+
+template_pah_fraction           0.5
+nrays_nonscatter                1000000
+nrays_scatter                   1000000
+nrays_aux                       1000000
+nrays_intensity                 1000000
+nrays_ir                        1000000
+i_min                           0.01
+i_max                           10
+ir_equilibrium_tolerance        0.1
+
+ir_luminosity_percentile        0.01
+
+integrate_ir                    true
+
+use_grain_temp_lookup           true
+use_cuda                        false
+
+n_wavelengths_intensity         25
+
+cpu_time_margin                 180
+wall_clock_margin               180
+CCfits_verbose                  false
+
+seed                            42
+
+n_threads                       32
+bind_threads                    false

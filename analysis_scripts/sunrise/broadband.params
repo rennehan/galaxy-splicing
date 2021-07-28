@@ -1,0 +1,9 @@
+input_file                      BROADBANDINPUT
+output_file                     BROADBANDOUTPUT
+
+use_counters                    true
+CCfits_verbose                  true
+
+filter_file_directory           /home/rennehan/data/sunrise/filters/
+filter_lambda_conversion        1e-10
+filter_list                     /home/rennehan/configs/sunrise/filters

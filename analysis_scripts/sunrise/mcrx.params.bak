@@ -1,0 +1,49 @@
+input_file                      /home/rennehan/data/sunrise/grid_300.fits
+output_file                     /home/rennehan/data/sunrise/mcrx_300.fits
+compress_images                 false
+write_images_parallel           false
+mcrx_data_dir                   /home/rennehan/scratch/source/sunrise/src/
+cameradistance                  1000 
+camerafov                       200
+npixels                         512 
+ntheta                          3 
+nphi                            4 
+exclude_south_pole              false
+
+camera_projection               rectilinear
+dust_grain_file 
+dust_to_gas_ratio               .0 
+dust_to_metal_ratio             0.4
+use_multiphase_model            true
+multiphase_t0_star              1.1e9
+multiphase_rho_th               1.71e7
+
+grain_model                     blackbody
+blackbody_opacity               0.35
+wd01_parameter_set
+use_dl07_opacities              false
+grain_data_directory            /home/rennehan/data/sunrise/
+template_pah_fraction
+nrays_nonscatter                1000000
+nrays_scatter                   1000000
+nrays_aux                       1000000
+nrays_intensity                 1000000
+nrays_ir                        1000000
+i_min                           0.01
+i_max                           10
+ir_equilibrium_tolerance        0.1
+
+ir_luminosity_percentile        0.01
+
+integrate_ir                    true
+
+use_grain_temp_lookup           false
+use_cuda                        false
+
+n_wavelengths_intensity         25
+
+cpu_time_margin                 180
+wall_clock_margin               180
+CCfits_verbose                  true
+
+seed                            42
